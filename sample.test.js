@@ -1,26 +1,19 @@
-// Import { arrayLength, evenOrOdd } from "./sample.js";
+import { manualArrayLength, fakepop } from "./sample.js";
 
-// Describe("evenOrOdd", () => {
-//   test('If given parameter p is "Hola" it should return "invalid type" ', () => {
-//     const x = "Hola";
-//     const expected = "invalid type";
-//     const r = evenOrOdd(x);
-//     expect(r).toBe(expected);
-//   });
-// });
+describe("manualArrayLength", () => {
+  test("if given and empty array as an argument it should return 0", () => {
+    const x = [];
+    const expected = 0;
+    const r = manualArrayLength(x);
+    expect(r).toBe(expected);
+  });
+});
 
-// test('If given parameter p is "Hola" it should return "invalid type" ', () => {
-//   const x = "Hola";
-//   const expected = "invalid type";
-//   const r = evenOrOdd(x);
-//   expect(r).toBe(expected);
-// });
-
-// describe.only("arrayLength", () => {
-//   test("should be  ", () => {
-//     const x = [];
-//     const expected = 0;
-//     const r = arrayLength(x);
-//     expect(r).toBe(expected);
-//   });
-// });
+describe("fakepop", () => {
+  test("it should be ... when argument is [1,2,3,4,5]", () => {
+    const x = [1, 2, 3, 4, 5];
+    const expected = 5;
+    const r = fakepop(x);
+    expect(r).toBe(expected);
+  });
+});
